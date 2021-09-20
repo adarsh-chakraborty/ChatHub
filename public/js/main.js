@@ -27,14 +27,22 @@ const refreshActiveUsers = () => {
 
 const chatBox = document.getElementById('chatBox');
 const inputBox = document.getElementById('msg');
+
+const sendNewMessage = () => {
+	socket.emit('message', { user: userName2, text: inputBox.value });
+	inputBox.value = '';
+	inputBox.focus();
+};
+
+inputBox.addEventListener('keyup', ({ key }) => {
+	if (key === 'Enter') {
+		sendNewMessage();
+	}
+});
 const btnLogout = document.getElementById('logout');
 const btnSend = document
 	.getElementById('btnSend')
-	.addEventListener('click', () => {
-		socket.emit('message', { user: userName2, text: inputBox.value });
-		inputBox.value = '';
-		inputBox.focus();
-	});
+	.addEventListener('click', sendNewMessage);
 
 // socket.emit to emit a event.
 // socket.on to receive an event.
