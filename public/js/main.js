@@ -31,6 +31,8 @@ const btnLogout = document.getElementById('logout');
 const btnSend = document
 	.getElementById('btnSend')
 	.addEventListener('click', () => {
+		inputBox.value = '';
+		inputBox.focus();
 		socket.emit('message', { user: userName2, text: inputBox.value });
 	});
 
