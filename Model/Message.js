@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 const messageSchema = new Schema({
 	text: String,
 	username: String,
-	time: String
+	time: String,
+	type: String
 });
 
 // Compile model from schema

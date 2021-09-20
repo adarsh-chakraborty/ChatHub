@@ -22491,6 +22491,42 @@ video {
   font-weight: 900;
 }
 
+.hover\:font-thin:hover{
+  font-weight: 100;
+}
+
+.hover\:font-extralight:hover{
+  font-weight: 200;
+}
+
+.hover\:font-light:hover{
+  font-weight: 300;
+}
+
+.hover\:font-normal:hover{
+  font-weight: 400;
+}
+
+.hover\:font-medium:hover{
+  font-weight: 500;
+}
+
+.hover\:font-semibold:hover{
+  font-weight: 600;
+}
+
+.hover\:font-bold:hover{
+  font-weight: 700;
+}
+
+.hover\:font-extrabold:hover{
+  font-weight: 800;
+}
+
+.hover\:font-black:hover{
+  font-weight: 900;
+}
+
 .uppercase{
   text-transform: uppercase;
 }
@@ -54091,6 +54127,42 @@ video {
     font-weight: 900;
   }
 
+  .sm\:hover\:font-thin:hover{
+    font-weight: 100;
+  }
+
+  .sm\:hover\:font-extralight:hover{
+    font-weight: 200;
+  }
+
+  .sm\:hover\:font-light:hover{
+    font-weight: 300;
+  }
+
+  .sm\:hover\:font-normal:hover{
+    font-weight: 400;
+  }
+
+  .sm\:hover\:font-medium:hover{
+    font-weight: 500;
+  }
+
+  .sm\:hover\:font-semibold:hover{
+    font-weight: 600;
+  }
+
+  .sm\:hover\:font-bold:hover{
+    font-weight: 700;
+  }
+
+  .sm\:hover\:font-extrabold:hover{
+    font-weight: 800;
+  }
+
+  .sm\:hover\:font-black:hover{
+    font-weight: 900;
+  }
+
   .sm\:uppercase{
     text-transform: uppercase;
   }
@@ -85336,6 +85408,42 @@ video {
   }
 
   .md\:font-black{
+    font-weight: 900;
+  }
+
+  .md\:hover\:font-thin:hover{
+    font-weight: 100;
+  }
+
+  .md\:hover\:font-extralight:hover{
+    font-weight: 200;
+  }
+
+  .md\:hover\:font-light:hover{
+    font-weight: 300;
+  }
+
+  .md\:hover\:font-normal:hover{
+    font-weight: 400;
+  }
+
+  .md\:hover\:font-medium:hover{
+    font-weight: 500;
+  }
+
+  .md\:hover\:font-semibold:hover{
+    font-weight: 600;
+  }
+
+  .md\:hover\:font-bold:hover{
+    font-weight: 700;
+  }
+
+  .md\:hover\:font-extrabold:hover{
+    font-weight: 800;
+  }
+
+  .md\:hover\:font-black:hover{
     font-weight: 900;
   }
 
@@ -116587,6 +116695,42 @@ video {
     font-weight: 900;
   }
 
+  .lg\:hover\:font-thin:hover{
+    font-weight: 100;
+  }
+
+  .lg\:hover\:font-extralight:hover{
+    font-weight: 200;
+  }
+
+  .lg\:hover\:font-light:hover{
+    font-weight: 300;
+  }
+
+  .lg\:hover\:font-normal:hover{
+    font-weight: 400;
+  }
+
+  .lg\:hover\:font-medium:hover{
+    font-weight: 500;
+  }
+
+  .lg\:hover\:font-semibold:hover{
+    font-weight: 600;
+  }
+
+  .lg\:hover\:font-bold:hover{
+    font-weight: 700;
+  }
+
+  .lg\:hover\:font-extrabold:hover{
+    font-weight: 800;
+  }
+
+  .lg\:hover\:font-black:hover{
+    font-weight: 900;
+  }
+
   .lg\:uppercase{
     text-transform: uppercase;
   }
@@ -147835,6 +147979,42 @@ video {
     font-weight: 900;
   }
 
+  .xl\:hover\:font-thin:hover{
+    font-weight: 100;
+  }
+
+  .xl\:hover\:font-extralight:hover{
+    font-weight: 200;
+  }
+
+  .xl\:hover\:font-light:hover{
+    font-weight: 300;
+  }
+
+  .xl\:hover\:font-normal:hover{
+    font-weight: 400;
+  }
+
+  .xl\:hover\:font-medium:hover{
+    font-weight: 500;
+  }
+
+  .xl\:hover\:font-semibold:hover{
+    font-weight: 600;
+  }
+
+  .xl\:hover\:font-bold:hover{
+    font-weight: 700;
+  }
+
+  .xl\:hover\:font-extrabold:hover{
+    font-weight: 800;
+  }
+
+  .xl\:hover\:font-black:hover{
+    font-weight: 900;
+  }
+
   .xl\:uppercase{
     text-transform: uppercase;
   }
@@ -179080,6 +179260,42 @@ video {
   }
 
   .\32xl\:font-black{
+    font-weight: 900;
+  }
+
+  .\32xl\:hover\:font-thin:hover{
+    font-weight: 100;
+  }
+
+  .\32xl\:hover\:font-extralight:hover{
+    font-weight: 200;
+  }
+
+  .\32xl\:hover\:font-light:hover{
+    font-weight: 300;
+  }
+
+  .\32xl\:hover\:font-normal:hover{
+    font-weight: 400;
+  }
+
+  .\32xl\:hover\:font-medium:hover{
+    font-weight: 500;
+  }
+
+  .\32xl\:hover\:font-semibold:hover{
+    font-weight: 600;
+  }
+
+  .\32xl\:hover\:font-bold:hover{
+    font-weight: 700;
+  }
+
+  .\32xl\:hover\:font-extrabold:hover{
+    font-weight: 800;
+  }
+
+  .\32xl\:hover\:font-black:hover{
     font-weight: 900;
   }
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script> -->
+    <script src="js/auth.js" defer></script>
+   
+    <title>Register at ChatHub</title>
+</head>
+<body>
+    <div class="mt-24 flex flex-col justify-center items-center font-Poppins">
+        <h1 class="text-3xl text-black font-bold">Chat<span class="bg-yellow-500 rounded p-1 ml-1">Hub</span></h1>
+        <h2 class="p-1">Before we continue..</h2>
+    </div>
+    <!-- Conditional Rendering...  -->
+    <% if(errorMsgs.length > 0 || successMsgs.length > 0) { %> 
+        <div class="flex justify-center items-center font-Comfortaa tracking-wide">
+            <% if(errorMsgs.length > 0) { %>
+                <div class="max-w-lg p-2 bg-red-300 rounded-md shadow-md border-2 border-red-800">
+                    <%= errorMsgs %> 
+                </div>
+            <% } %>  
+
+            <% if(successMsgs.length > 0) { %>
+                <div class="max-w-lg p-2 bg-green-300 rounded-md shadow-md border-2 border-green-800">
+                    <%= successMsgs %> 
+                </div>
+            <% } %>  
+        </div>
+    <% } %> 
+    
+    <div class="mt-4 flex w-full justify-center gap-11 font-Poppins">
+        <form method="POST" action="/auth/login">
+        <div class="flex flex-col justify-center items-center max-w-sm">
+            <h1 class="self-start p-2 text-lg font-semibold">Login</h1>
+            <div class="flex flex-col space-y-4 gap-2 space-y-4 w-full">
+                <input placeholder="username..." class="border px-2 py-1 rounded" type="text" name="username">
+                <input placeholder="password..." class="border px-2 py-1 rounded" type="text" name="password">
+                <button type="submit" id='btnLogin' class="uppercase border p-2 bg-yellow-500 text-lg font-bold shadow-md">Login</button>
+            </div>
+        </div>
+        </form>
+ 
+        <form method="POST" action="/auth/register">
+        <div class="flex flex-col justify-center items-center border-l-2 pl-12 max-w-sm">
+            <h1 class="self-start p-2 font-semibold">or Register a new account.</h1>
+            <div class="flex flex-col space-y-4 gap-2 space-y-4 w-full">
+                <input placeholder="Choose a username" class="border px-2 py-1 rounded" type="text" name="username" id="usr">
+                <input placeholder="Enter a password" class="border px-2 py-1 rounded" type="text" name="password" id="pwd">
+                <button type="submit" id='btnRegister' class="uppercase border p-2 bg-yellow-500 text-lg font-bold shadow-md">Register</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    
+</body>
+</html>
