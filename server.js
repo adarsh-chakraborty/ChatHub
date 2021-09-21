@@ -97,25 +97,12 @@ io.on('connection', (socket) => {
 		socket.username = username;
 		onlineUsers.set(socket.id, username);
 		io.emit('join', username);
-		console.log(onlineUsers);
-		if (username?.trim()) {
-			Message.create({
-				username: username,
-				type: 'connect'
-			}).catch((err) => console.log(err));
-		}
 	});
 
 	socket.on('disconnect', (user) => {
 		onlineUsers.delete(socket.id);
 		console.log(onlineUsers);
 		io.emit('leave', socket.username);
-		if (socket?.username?.trim()) {
-			Message.create({
-				username: socket.username,
-				type: 'disconnect'
-			}).catch((err) => console.log(err));
-		}
 	});
 
 	socket.on('message', (message) => {
