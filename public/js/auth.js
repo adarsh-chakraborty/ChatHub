@@ -1,14 +1,39 @@
-const loginUserName = document.getElementById('loginusr');
-const loginPassword = document.getElementById('loginpwd');
-console.log('helo?');
-const registerUsername = document.getElementById('usr');
-const registerPassword = document.getElementById('pwd');
+const showSignup = document.getElementById('showSignup');
+const showLogin = document.getElementById('showLogin');
+const formLogin = document.getElementById('formLogin');
+const formRegister = document.getElementById('formRegister');
 
-// const btnLogin = document
-// 	.getElementById('btnLogin')
-// 	.addEventListener('click', loginUser);
-// const btnRegister = document
-// 	.getElementById('btnRegister')
-// 	.addEventListener('click', (e) => {
-// 		e.preventDefault();
-// 	});
+showSignup.addEventListener('click', () => {
+	// remove hidden from form register
+	// add hidden to form login
+	// formLogin.classList.add('hidden');
+	// formRegister.classList.remove('hidden');
+
+	$(formLogin).hide('fast', function () {
+		$(formRegister).show('slow');
+	});
+});
+
+showLogin.addEventListener('click', () => {
+	// formRegister.classList.add('hidden');
+	// formLogin.classList.remove('hidden');
+
+	$(formRegister).hide('fast', function () {
+		$(formLogin).show('slow');
+	});
+});
+
+let windowsize = $(window).width();
+
+$(window).resize(function () {
+	windowsize = $(window).width();
+	if (windowsize < 640) {
+		$(formRegister).hide('slow', () => {
+			$(formLogin).show('slow');
+		});
+	} else {
+		$(formLogin).show('slow', () => {
+			$(formRegister).show('slow');
+		});
+	}
+});

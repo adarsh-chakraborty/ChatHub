@@ -10,6 +10,7 @@ Router.post('/register', (req, res, next) => {
 	if (!username.trim().length > 0 || !password.trim().length > 0) {
 		return res.send('Enter all the required values!');
 	}
+	let displayName = username;
 	User.findOne({ username: username }).then((doc) => {
 		if (doc) {
 			console.log('User already exists!');
@@ -20,7 +21,13 @@ Router.post('/register', (req, res, next) => {
 			return res.redirect('/');
 		}
 
-		User.create({ username, password, token: null, isAdmin: false })
+		User.create({
+			displayName,
+			username,
+			password,
+			token: null,
+			isAdmin: false
+		})
 			.then(() => {
 				console.log('user created!');
 				req.flash(
@@ -44,6 +51,7 @@ Router.post('/login', (req, res, next) => {
 	if (!username.trim().length > 0 || !password.trim().length > 0) {
 		return res.send('Enter all the required values!');
 	}
+
 	User.findOne({ username: username }).then((doc) => {
 		if (!doc) {
 			console.log("This username isn't registered.");
@@ -61,7 +69,7 @@ Router.post('/login', (req, res, next) => {
 			return res.redirect('/');
 		}
 		// login
-		res.cookie('user', doc.username, options);
+		res.cookie('user', doc.displayName, options);
 		res.redirect('/');
 	});
 });
