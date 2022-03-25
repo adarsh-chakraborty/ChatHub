@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -14,13 +14,13 @@ const io = new Server(server);
 const mongoose = require('mongoose');
 const User = require('./Model/User');
 const Message = require('./Model/Message');
+
 const cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT || 3000;
 const authRoutes = require('./Routes/authRoutes');
 const apiRoutes = require('./Routes/apiRoutes');
 
-const OnlineUsers = require('./Utils/onlineUsers');
 const onlineUsers = require('./Utils/onlineUsers');
 app.set('view engine', 'ejs');
 app.set('json spaces', 4);
@@ -136,7 +136,7 @@ mongoose
 		useUnifiedTopology: true
 	})
 	.then(() => {
-		console.log('Connected to mongo db. Starting server...');
+		console.log('Connected to MongoDB (Hopefully). Starting server...');
 
 		server.listen(PORT, () => {
 			console.log('listening on *:' + PORT);
